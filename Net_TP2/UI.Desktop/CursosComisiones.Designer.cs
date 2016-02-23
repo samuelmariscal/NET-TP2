@@ -154,6 +154,7 @@
             this.btnModificarCurso.TabIndex = 5;
             this.btnModificarCurso.Text = "Modificar Curso";
             this.btnModificarCurso.UseVisualStyleBackColor = true;
+            this.btnModificarCurso.Click += new System.EventHandler(this.btnModificarCurso_Click);
             // 
             // cmbPlanes
             // 

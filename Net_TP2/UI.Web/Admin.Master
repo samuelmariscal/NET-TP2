@@ -8,7 +8,7 @@
         <li class="alert-link"><a href="../Usuario/Usuarios.aspx">Ver Usuarios</a></li>
         <li class="alert-link"><a href="../Especialidades/Especialidades.aspx">Especialidades</a></li>
         <li class="alert-link"><a href="../PlanesMaterias/Materias.aspx">Planes y Materias</a></li>
-        <li class="alert-link"><a href="Administrador/CursoComisiones.aspx">Cursos y Comisiones</a></li>
+        <li class="alert-link"><a href="../CursoComisiones/CursoComisiones.aspx">Cursos y Comisiones</a></li>
         <li class="alert-link"><a href="Login.aspx">Cerrar Sesión</a></li>
     </ul>
     <asp:ContentPlaceHolder ID="adminCenter" runat="server">

@@ -57,6 +57,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrador\CursoComisiones\AltaCurso.aspx" />
+    <Content Include="Administrador\CursoComisiones\CursoComisiones.aspx" />
+    <Content Include="Administrador\CursoComisiones\ModificarCurso.aspx" />
     <Content Include="Administrador\Especialidades\AltaEspecialidad.aspx" />
     <Content Include="Administrador\Especialidades\Especialidades.aspx" />
     <Content Include="Administrador\Especialidades\ModificarEspecialidad.aspx" />
@@ -107,6 +110,27 @@
     </Compile>
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\CursoComisiones\AltaCurso.aspx.cs">
+      <DependentUpon>AltaCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\CursoComisiones\AltaCurso.aspx.designer.cs">
+      <DependentUpon>AltaCurso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\CursoComisiones\CursoComisiones.aspx.cs">
+      <DependentUpon>CursoComisiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\CursoComisiones\CursoComisiones.aspx.designer.cs">
+      <DependentUpon>CursoComisiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\CursoComisiones\ModificarCurso.aspx.cs">
+      <DependentUpon>ModificarCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\CursoComisiones\ModificarCurso.aspx.designer.cs">
+      <DependentUpon>ModificarCurso.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administrador\Especialidades\AltaEspecialidad.aspx.cs">
       <DependentUpon>AltaEspecialidad.aspx</DependentUpon>

@@ -97,5 +97,10 @@ namespace UI.Desktop
             btnEliminarCurso.Enabled = true;
             btnAddCurso.Enabled = true;
         }
+
+        private void btnModificarCurso_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
