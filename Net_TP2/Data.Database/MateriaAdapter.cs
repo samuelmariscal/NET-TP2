@@ -156,15 +156,42 @@ namespace Data.Database
 
         public DataTable GetAll(int plan, int comision)
         {
-            this.OpenConnection();
-            DataTable dt = new DataTable();
-            MySqlCommand cmd = new MySqlCommand("select * from materias m inner join cursos c on m.id_materia=c.id_materia where c.id_plan = @id and c.id_comision <> @com", SqlConn);
-            cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = plan;
-            cmd.Parameters.Add("@com", MySqlDbType.Int32).Value = comision;
-            MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
-            adap.Fill(dt);
-            this.CloseConnection();
-            return dt;
+            try
+            {
+                this.OpenConnection();
+                DataTable dt = new DataTable();
+                MySqlCommand cmd = new MySqlCommand("select * from materias m where id_plan = @id and not exists (select * from cursos c where c.id_materia=m.id_materia and id_comision=@com)", SqlConn);
+                cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = plan;
+                cmd.Parameters.Add("@com", MySqlDbType.Int32).Value = comision;
+                MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
+                adap.Fill(dt);
+                this.CloseConnection();
+                return dt;
+            }
+            catch (Exception e)
+            {
+                this.OpenConnection();
+                DataTable dt = new DataTable();
+                MySqlCommand cmd = new MySqlCommand("select * from materias where id_plan = @id", SqlConn);
+                cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = plan;
+                MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
+                adap.Fill(dt);
+                this.CloseConnection();
+                return dt;
+            }
         }
+         //EL DE ARRIBA ANDA PARA CURSOSYCOMISIONES(NO BORRAR), BORRAR ESTE SINO SE USA
+        /*public DataTable GetAll(int plan, int comision)
+        {
+                this.OpenConnection();
+                DataTable dt = new DataTable();
+                MySqlCommand cmd = new MySqlCommand("select * from materias m inner join cursos c on m.id_materia=c.id_materia where m.id_plan = @id and c.id_comision <> @com", SqlConn);
+                cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = plan;
+                cmd.Parameters.Add("@com", MySqlDbType.Int32).Value = comision;
+                MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
+                adap.Fill(dt);
+                this.CloseConnection();
+                return dt;            
+        }*/
     }
 }

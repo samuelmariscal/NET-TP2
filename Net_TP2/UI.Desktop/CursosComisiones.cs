@@ -62,6 +62,7 @@ namespace UI.Desktop
                 cmbComision.DataSource = cl.DameComisiones((int)cmbPlanes.SelectedValue);
                 CursoLogic curl = new CursoLogic();
                 dgvCursos.DataSource = curl.DameCursos((int)cmbComision.SelectedValue);
+                btnAddCurso.Enabled = true;
             }
             catch(NullReferenceException nre)
             {
