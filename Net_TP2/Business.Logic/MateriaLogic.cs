@@ -30,7 +30,14 @@ namespace Business.Logic
 
         public void Delete(int id)
         {
-            MateriaData.Delete(id);
+            try
+            {
+                MateriaData.Delete(id);
+            }
+            catch(Exception Ex)
+            {
+                throw Ex;
+            }
         }
 
         public void Save(Materia MateriaActual)

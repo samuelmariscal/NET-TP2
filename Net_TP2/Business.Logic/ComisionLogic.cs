@@ -34,7 +34,14 @@ namespace Business.Logic
 
         public void Delete(int id)
         {
-            ComisionData.Delete(id);
+            try
+            {
+                ComisionData.Delete(id);
+            }
+            catch(Exception Ex)
+            {
+                throw Ex;
+            }
         }
     }
 }

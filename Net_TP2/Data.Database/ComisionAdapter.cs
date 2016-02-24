@@ -108,7 +108,7 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al eliminar comision", Ex);
+                Exception ExcepcionManejada = new Exception("Error al eliminar comision, verifique que no tenga cursos asignados", Ex);
                 throw ExcepcionManejada;
             }
             finally

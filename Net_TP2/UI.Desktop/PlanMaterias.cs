@@ -47,10 +47,17 @@ namespace UI.Desktop
 
         private void btmEliminar_Click(object sender, EventArgs e)
         {
-            int id = (int)dgvMaterias.CurrentRow.Cells[0].Value;
-            if (MessageBox.Show("¿Está seguro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
-                ml.Delete(id);
-            this.Listar();
+            try
+            {
+                int id = (int)dgvMaterias.CurrentRow.Cells[0].Value;
+                if (MessageBox.Show("¿Está seguro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+                    ml.Delete(id);
+                this.Listar();
+            }
+            catch(Exception Ex)
+            {
+                Notificar("Error", Ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btmAgregar_Click(object sender, EventArgs e)
