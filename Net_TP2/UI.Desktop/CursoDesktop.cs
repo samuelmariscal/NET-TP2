@@ -69,6 +69,7 @@ namespace UI.Desktop
                 c.IDComision = int.Parse(this.txtComision.Text);
                 c.IDMateria = (int)cmbMateria.SelectedValue;
                 c.Cupo = int.Parse(txtCupo.Text);
+                c.AnioCalendario = DateTime.Now.Year;
                 this.CursoActual.State = BusinessEntity.States.New;
             }
             else if (modoForm == ModoForm.Modificacion)
