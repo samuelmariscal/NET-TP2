@@ -145,6 +145,7 @@
             this.btnEliminarCurso.TabIndex = 4;
             this.btnEliminarCurso.Text = "Eliminar Curso";
             this.btnEliminarCurso.UseVisualStyleBackColor = true;
+            this.btnEliminarCurso.Click += new System.EventHandler(this.btnEliminarCurso_Click);
             // 
             // btnModificarCurso
             // 

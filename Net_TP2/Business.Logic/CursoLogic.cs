@@ -26,10 +26,10 @@ namespace Business.Logic
             return CursoData.GetCursosAInscribir(idPlan, usrID);
         }
 
-        public void ActualizarCurso(int idCurso,int cupo)
+        public void ActualizarCupoCurso(int idCurso,int cupo)
         {
             int cupoActualizado = cupo - 1;
-            CursoData.UpdateCurso(idCurso, cupoActualizado);
+            CursoData.UpdateCupoCurso(idCurso, cupoActualizado);
         }
 
         public DataTable DameCursos()
@@ -45,6 +45,21 @@ namespace Business.Logic
         public void AddCurso(Entities.Curso c)
         {
             CursoData.AddCurso(c);
+        }
+
+        public void Save(Entities.Curso CursoActual)
+        {
+            CursoData.Save(CursoActual);
+        }
+
+        public Entities.Curso GetOne(int idCurso)
+        {
+            return CursoData.GetOne(idCurso);
+        }
+
+        public void Delete(int id)
+        {
+            CursoData.Delete(id);
         }
     }
 }

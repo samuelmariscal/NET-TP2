@@ -87,7 +87,7 @@ namespace UI.Desktop
 
         private void btnAddCurso_Click(object sender, EventArgs e)
         {
-            CursoAdd ca = new CursoAdd((int)cmbPlanes.SelectedValue, (int)cmbComision.SelectedValue);
+            CursoDesktop ca = new CursoDesktop((int)cmbPlanes.SelectedValue, (int)cmbComision.SelectedValue,ModoForm.Alta);
             ca.ShowDialog();
         }
 
@@ -100,7 +100,20 @@ namespace UI.Desktop
 
         private void btnModificarCurso_Click(object sender, EventArgs e)
         {
+            int idCurso = (int)dgvCursos.CurrentRow.Cells[0].Value;
+            int idCom = (int)dgvCursos.CurrentRow.Cells[4].Value;
+            int idPlan = (int)cmbPlanes.SelectedValue;
+            CursoDesktop cd = new CursoDesktop(idCurso,idPlan,idCom, ModoForm.Modificacion);
+            cd.Show();
+        }
 
+        private void btnEliminarCurso_Click(object sender, EventArgs e)
+        {
+            CursoLogic cl = new CursoLogic();
+            int id = (int)dgvCursos.CurrentRow.Cells[0].Value;
+            if (MessageBox.Show("¿Está seguro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+                cl.Delete(id);
+            this.Listar();
         }
     }
 }

@@ -94,11 +94,11 @@
     <Compile Include="Comisiones.Designer.cs">
       <DependentUpon>Comisiones.cs</DependentUpon>
     </Compile>
-    <Compile Include="CursoAdd.cs">
+    <Compile Include="CursoDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CursoAdd.Designer.cs">
-      <DependentUpon>CursoAdd.cs</DependentUpon>
+    <Compile Include="CursoDesktop.Designer.cs">
+      <DependentUpon>CursoDesktop.cs</DependentUpon>
     </Compile>
     <Compile Include="CursosComisiones.cs">
       <SubType>Form</SubType>
@@ -219,8 +219,8 @@
     <EmbeddedResource Include="Comisiones.resx">
       <DependentUpon>Comisiones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CursoAdd.resx">
-      <DependentUpon>CursoAdd.cs</DependentUpon>
+    <EmbeddedResource Include="CursoDesktop.resx">
+      <DependentUpon>CursoDesktop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CursosComisiones.resx">
       <DependentUpon>CursosComisiones.cs</DependentUpon>

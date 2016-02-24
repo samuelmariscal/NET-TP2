@@ -52,7 +52,7 @@ namespace UI.Desktop
                 il.GenerarInscripcion(ai);
                 CursoLogic cl = new CursoLogic();
                 int cupo = (int)dgvCurComMa.CurrentRow.Cells[5].Value;
-                cl.ActualizarCurso(ai.IDCurso, cupo);
+                cl.ActualizarCupoCurso(ai.IDCurso, cupo);
                 Notificar("Inscripcion generada correctamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Listar();
             }
