@@ -13,13 +13,14 @@
            <label>Comision: </label>
            <asp:TextBox runat="server" type="text" class="form-control" id="txtComision" Enabled="False" />
             <br />
+            <label>Materia: </label>
+           <asp:DropDownList ID="ddlMaterias" runat="server">
+           </asp:DropDownList><br />
             <label>Descripción:</label>
            <asp:TextBox runat="server" type="text" class="form-control" id="txtDescripcion" />
             <label>Cupo: </label>
            <asp:TextBox runat="server" type="text" class="form-control" id="txtCupo" />
-           <label>Materia: </label>
-           <asp:DropDownList ID="ddlMaterias" runat="server">
-           </asp:DropDownList><br />
+           
             
           
             <br /> <br />

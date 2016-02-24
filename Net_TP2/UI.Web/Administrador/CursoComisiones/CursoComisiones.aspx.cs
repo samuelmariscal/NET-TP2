@@ -58,10 +58,12 @@ namespace UI.Web.Administrador.CursoComisiones
 
             if (e.CommandName == "btnModificar")
             {
+                int plan = int.Parse(this.ddlPlanes.SelectedValue);
+                int comision = int.Parse(this.ddlComision.SelectedValue);
                 dgvCursos.SelectedIndex = Convert.ToInt32(e.CommandArgument);
                 GridViewRow row = dgvCursos.SelectedRow;
                 string id = row.Cells[0].Text;
-                Response.Redirect("ModificarCurso.aspx?id=" + id);
+                Response.Redirect("ModificarCurso.aspx?id=" + id+"&plan="+plan+"&comision="+comision);
             }
         }
 
