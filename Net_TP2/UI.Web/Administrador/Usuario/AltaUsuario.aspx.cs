@@ -29,6 +29,8 @@ namespace UI.Web.Administrador
             {
                 Response.Redirect("../Login.aspx");
             }
+            
+            this.txtNombre.Focus();
             if (!IsPostBack)
             {
                 Usuario usu = (Usuario)Session["Usuario"];

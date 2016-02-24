@@ -34,7 +34,7 @@
             </asp:GridView>
            <br />
            <p>
-               <asp:Button CssClass="btn btn-success" ID="btnAlta" runat="server" Text="Alta" OnClick="btnAlta_Click" />
+               <asp:Button CssClass="btn btn-success" ID="btnAlta" runat="server" Text="Alta Curso" OnClick="btnAlta_Click" />
            </p>
         </div>
        </center>

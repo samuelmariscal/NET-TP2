@@ -30,6 +30,7 @@ namespace UI.Web.Administrador
             {
                 Response.Redirect("../Login.aspx");
             }
+            this.txtNombre.Focus();
             if (!IsPostBack)
             {
                 UsuarioLogic ul = new UsuarioLogic();

@@ -30,7 +30,7 @@ namespace UI.Web.Administrador
                 Response.Redirect("../Login.aspx");
             }
             Usuario usu = (Usuario)Session["Usuario"];
-
+            this.txtEspecialidad.Focus();
             if (!IsPostBack)
             {
                 EspecialidadLogic el = new EspecialidadLogic();

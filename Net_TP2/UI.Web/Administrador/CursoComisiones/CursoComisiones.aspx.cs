@@ -41,7 +41,9 @@ namespace UI.Web.Administrador.CursoComisiones
 
         protected void btnAlta_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AltaCurso.aspx");
+            int plan = int.Parse(this.ddlPlanes.SelectedValue);
+            int comision = int.Parse(this.ddlComision.SelectedValue);
+            Response.Redirect("AltaCurso.aspx?plan="+plan+"&comision="+comision);
         }
         protected void dgvCursos_RowCommand(object sender, GridViewCommandEventArgs e)
         {

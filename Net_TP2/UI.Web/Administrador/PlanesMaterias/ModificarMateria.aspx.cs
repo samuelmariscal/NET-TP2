@@ -30,7 +30,7 @@ namespace UI.Web.Administrador.PlanesMaterias
                 Response.Redirect("../Login.aspx");
             }
             Usuario usu = (Usuario)Session["Usuario"];
-
+            this.txtMateria.Focus();
             if (!IsPostBack)
             {
                 ddlPlanes.DataSource = new PlanLogic().GetAll();

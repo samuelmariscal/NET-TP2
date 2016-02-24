@@ -30,6 +30,7 @@ namespace UI.Web.Administrador
                 Response.Redirect("../Login.aspx");
             }
             Usuario usu = (Usuario)Session["Usuario"];
+            this.txtEspecialidad.Focus();
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
