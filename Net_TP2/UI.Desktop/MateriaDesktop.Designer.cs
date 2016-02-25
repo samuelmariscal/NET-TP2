@@ -187,6 +187,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 177);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MateriaDesktop";
             this.Text = "MateriaDesktop";
             this.Load += new System.EventHandler(this.MateriaDesktop_Load);

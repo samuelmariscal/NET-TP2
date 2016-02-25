@@ -61,7 +61,6 @@ C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\UI.Desktop\obj\Debug\UI.Desktop
 C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\UI.Desktop\obj\Debug\UI.Desktop.Comisiones.resources
 C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\UI.Desktop\obj\Debug\UI.Desktop.CursosComisiones.resources
 C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\UI.Desktop\obj\Debug\UI.Desktop.CursosDocente.resources
-C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\UI.Desktop\obj\Debug\UI.Desktop.EspecialidadDesktop.resources
 C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\UI.Desktop\obj\Debug\UI.Desktop.Especialidades.resources
 C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\UI.Desktop\obj\Debug\UI.Desktop.EstadoAcademico.resources
 C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\UI.Desktop\obj\Debug\UI.Desktop.InscripcionCursado.resources
@@ -79,3 +78,4 @@ C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\UI.Desktop\obj\Debug\UI.Desktop
 C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\UI.Desktop\obj\Debug\UI.Desktop.csproj.GenerateResource.Cache
 C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\UI.Desktop\obj\Debug\UI.Desktop.CursoDesktop.resources
 C:\Users\Lisandro\Documents\GitHub\NET-TP2\Net_TP2\UI.Desktop\obj\Debug\UI.Desktop.CursoDesktop.resources
+C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\UI.Desktop\obj\Debug\UI.Desktop.EspecialidadDesktop.resources

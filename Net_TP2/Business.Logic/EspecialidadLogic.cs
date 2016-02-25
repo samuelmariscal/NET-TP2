@@ -24,7 +24,14 @@ namespace Business.Logic
 
         public void Delete(int id)
         {
-            EspecialidadData.Delete(id);
+            try
+            {
+                EspecialidadData.Delete(id);
+            }
+            catch(Exception Ex)
+            {
+                throw Ex;
+            }
         }
 
         public void Save(Especialidad EspecialidadActual)

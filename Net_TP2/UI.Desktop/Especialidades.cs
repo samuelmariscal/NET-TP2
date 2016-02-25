@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace UI.Desktop
 {
-    public partial class Especialidades : Form
+    public partial class Especialidades : ApplicationForm
     {
         public Especialidades()
         {
@@ -33,8 +33,38 @@ namespace UI.Desktop
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            EspecialidadDesktop ed = new EspecialidadDesktop();
+            EspecialidadDesktop ed = new EspecialidadDesktop(ApplicationForm.ModoForm.Alta);
             ed.Show();
+        }
+
+        private void tsbEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EspecialidadLogic el = new EspecialidadLogic();
+                int idEsp = (int)dgvEspecialidades.CurrentRow.Cells[0].Value;
+                if (MessageBox.Show("¿Está seguro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+                {
+                    el.Delete(idEsp);
+                    Listar();
+                }
+            }
+            catch(Exception Ex)
+            {
+                Notificar("Error", Ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void tsbModificar_Click(object sender, EventArgs e)
+        {
+            int id = (int)dgvEspecialidades.CurrentRow.Cells[0].Value;
+            EspecialidadDesktop ed = new EspecialidadDesktop(id, ApplicationForm.ModoForm.Modificacion);
+            ed.Show();
+        }
+
+        private void tsbActualizar_Click(object sender, EventArgs e)
+        {
+            Listar();
         }
     }
 }

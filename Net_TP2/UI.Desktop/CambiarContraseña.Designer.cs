@@ -169,6 +169,7 @@
             this.ClientSize = new System.Drawing.Size(387, 170);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "CambiarContraseña";
             this.Text = "CambiarContraseña";
             this.Load += new System.EventHandler(this.CambiarContraseña_Load);

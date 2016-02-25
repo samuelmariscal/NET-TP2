@@ -21,8 +21,7 @@ namespace UI.Desktop
 
         public MateriaDesktop(int idMateria, ModoForm modoForm)//:this()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
             this.modoForm = modoForm;
             MateriaLogic ml = new MateriaLogic();
             if (modoForm == ModoForm.Baja)

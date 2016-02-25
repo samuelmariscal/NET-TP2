@@ -165,6 +165,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(325, 177);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "CalificarDesktop";
             this.Text = "CalificarDesktop";
             this.Load += new System.EventHandler(this.CalificarDesktop_Load);

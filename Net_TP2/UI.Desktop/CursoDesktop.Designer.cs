@@ -31,15 +31,15 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtComision = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbMateria = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtCupo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescr = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.txtCupo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbMateria = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -91,44 +91,6 @@
             this.txtComision.Size = new System.Drawing.Size(53, 20);
             this.txtComision.TabIndex = 1;
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Materia:";
-            // 
-            // cmbMateria
-            // 
-            this.cmbMateria.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cmbMateria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMateria.FormattingEnabled = true;
-            this.cmbMateria.Location = new System.Drawing.Point(92, 92);
-            this.cmbMateria.Name = "cmbMateria";
-            this.cmbMateria.Size = new System.Drawing.Size(158, 21);
-            this.cmbMateria.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Cupo:";
-            // 
-            // txtCupo
-            // 
-            this.txtCupo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCupo.Location = new System.Drawing.Point(92, 63);
-            this.txtCupo.Name = "txtCupo";
-            this.txtCupo.Size = new System.Drawing.Size(53, 20);
-            this.txtCupo.TabIndex = 5;
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -147,27 +109,43 @@
             this.txtDescr.Size = new System.Drawing.Size(158, 20);
             this.txtDescr.TabIndex = 7;
             // 
-            // btnCancelar
+            // txtCupo
             // 
-            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCancelar.Location = new System.Drawing.Point(117, 16);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.txtCupo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtCupo.Location = new System.Drawing.Point(92, 63);
+            this.txtCupo.Name = "txtCupo";
+            this.txtCupo.Size = new System.Drawing.Size(53, 20);
+            this.txtCupo.TabIndex = 5;
             // 
-            // btnAceptar
+            // label3
             // 
-            this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAceptar.Location = new System.Drawing.Point(11, 16);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 8;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(51, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Cupo:";
+            // 
+            // cmbMateria
+            // 
+            this.cmbMateria.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmbMateria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMateria.FormattingEnabled = true;
+            this.cmbMateria.Location = new System.Drawing.Point(92, 92);
+            this.cmbMateria.Name = "cmbMateria";
+            this.cmbMateria.Size = new System.Drawing.Size(158, 21);
+            this.cmbMateria.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(41, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Materia:";
             // 
             // tableLayoutPanel2
             // 
@@ -184,6 +162,28 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(195, 55);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAceptar.Location = new System.Drawing.Point(11, 16);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 8;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnCancelar.Location = new System.Drawing.Point(117, 16);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // CursoDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,7 +192,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "CursoDesktop";
             this.Text = "ABM Curso";
             this.Load += new System.EventHandler(this.CursoAdd_Load);

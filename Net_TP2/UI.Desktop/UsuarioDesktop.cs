@@ -37,14 +37,18 @@ namespace UI.Desktop
             cmbTipoPersona.DataSource = ul.GetTiposPersonas();
             cmbTipoPersona.DisplayMember="desc_tipo_persona";
             cmbTipoPersona.ValueMember="id_tipo_persona";
-            if(UsuarioActual != null)
+            if (UsuarioActual != null)
+            {
                 this.cmbTipoPersona.Text = (this.UsuarioActual.TipoPersona).ToString();
+                this.cmbPlanes.Text = (this.UsuarioActual.IDPlan).ToString();
+            }
         }
 
         public override void MapearDeDatos()
         {
             this.chkHabilitado.Checked = this.UsuarioActual.Habilitado;
             this.txtNombre.Text = this.UsuarioActual.Nombre;
+            this.cmbPlanes.SelectedValue = this.UsuarioActual.IDPlan;
             this.txtApellido.Text = this.UsuarioActual.Apellido;
             this.txtEmail.Text = this.UsuarioActual.Email;
             this.txtUsuario.Text = this.UsuarioActual.NombreUsuario;
@@ -73,6 +77,7 @@ namespace UI.Desktop
                 usr.Clave = "123456";
                 usr.Email = this.txtEmail.Text;
                 usr.setTipoPersona(this.cmbTipoPersona.Text);
+                usr.IDPlan = (int)cmbPlanes.SelectedValue;
                 usr.Habilitado = this.chkHabilitado.Checked;
                 usr.Nombre = this.txtNombre.Text;
                 usr.NombreUsuario = this.txtUsuario.Text;
@@ -120,19 +125,29 @@ namespace UI.Desktop
 
         public UsuarioDesktop(ModoForm modo):this()
         {
+            PlanLogic pl = new PlanLogic();
+            cmbPlanes.DataSource = pl.GetAll();
+            cmbPlanes.DisplayMember = "desc_plan";
+            cmbPlanes.ValueMember = "id_plan";
+            cmbPlanes.Enabled = false;
             this.Modo = modo;
         }
         public UsuarioDesktop(int ID, ModoForm modo):this()
-        {            
+        {
             this.Modo = modo;
             UsuarioLogic ul = new UsuarioLogic();
+            PlanLogic pl = new PlanLogic();
             if (modo == ModoForm.Baja)
             {
                 ul.Delete(ID);
             }
             else 
-            {
+            {               
+                cmbPlanes.DataSource = pl.GetAll();
+                cmbPlanes.DisplayMember = "desc_plan";
+                cmbPlanes.ValueMember = "id_plan";
                 this.cmbTipoPersona.Enabled = false;
+                this.cmbPlanes.Enabled = false;
                 UsuarioActual = ul.GetOne(ID);            
                 this.MapearDeDatos();
             }          
@@ -152,6 +167,19 @@ namespace UI.Desktop
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbTipoPersona_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (cmbTipoPersona.Text == "Administrador" || cmbTipoPersona.Text == "Docente")
+            {
+                cmbPlanes.SelectedValue = 0;
+                cmbPlanes.Enabled = false;
+            }
+            else
+            {                
+                cmbPlanes.Enabled = true;
+            }
         }
 
     }

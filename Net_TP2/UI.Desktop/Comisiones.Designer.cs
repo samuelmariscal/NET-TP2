@@ -121,7 +121,7 @@
             this.tsbActualizar});
             this.toolStrip1.Location = new System.Drawing.Point(3, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(135, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(104, 25);
             this.toolStrip1.TabIndex = 0;
             // 
             // tsbNuevo
@@ -170,6 +170,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 316);
             this.Controls.Add(this.toolStripContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Comisiones";
             this.Text = "Comisiones";
             this.Load += new System.EventHandler(this.Comisiones_Load);

@@ -50,6 +50,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
+            this.lblPlan = new System.Windows.Forms.Label();
+            this.cmbPlanes = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -208,6 +210,8 @@
             this.tableLayoutPanel3.Controls.Add(this.btnCancelar, 1, 6);
             this.tableLayoutPanel3.Controls.Add(this.lblTelefono, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.txtTelefono, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.lblPlan, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.cmbPlanes, 1, 4);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(271, 2);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
@@ -248,6 +252,7 @@
             this.cmbTipoPersona.Name = "cmbTipoPersona";
             this.cmbTipoPersona.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoPersona.TabIndex = 7;
+            this.cmbTipoPersona.SelectionChangeCommitted += new System.EventHandler(this.cmbTipoPersona_SelectionChangeCommitted);
             // 
             // lblTipoPersona
             // 
@@ -321,6 +326,26 @@
             this.txtTelefono.Size = new System.Drawing.Size(121, 20);
             this.txtTelefono.TabIndex = 9;
             // 
+            // lblPlan
+            // 
+            this.lblPlan.AutoSize = true;
+            this.lblPlan.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblPlan.Location = new System.Drawing.Point(59, 116);
+            this.lblPlan.Name = "lblPlan";
+            this.lblPlan.Size = new System.Drawing.Size(31, 27);
+            this.lblPlan.TabIndex = 13;
+            this.lblPlan.Text = "Plan:";
+            this.lblPlan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cmbPlanes
+            // 
+            this.cmbPlanes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPlanes.FormattingEnabled = true;
+            this.cmbPlanes.Location = new System.Drawing.Point(96, 119);
+            this.cmbPlanes.Name = "cmbPlanes";
+            this.cmbPlanes.Size = new System.Drawing.Size(121, 21);
+            this.cmbPlanes.TabIndex = 14;
+            // 
             // UsuarioDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,5 +390,7 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.MaskedTextBox txtTelefono;
+        private System.Windows.Forms.Label lblPlan;
+        private System.Windows.Forms.ComboBox cmbPlanes;
     }
 }

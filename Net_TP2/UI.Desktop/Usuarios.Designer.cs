@@ -207,7 +207,7 @@
             this.toolStripButton1});
             this.tsUsuarios.Location = new System.Drawing.Point(3, 0);
             this.tsUsuarios.Name = "tsUsuarios";
-            this.tsUsuarios.Size = new System.Drawing.Size(145, 27);
+            this.tsUsuarios.Size = new System.Drawing.Size(114, 27);
             this.tsUsuarios.TabIndex = 0;
             // 
             // tsbNuevo
@@ -262,6 +262,7 @@
             this.ClientSize = new System.Drawing.Size(709, 357);
             this.Controls.Add(this.tscUsuarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Usuarios";
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.Usuarios_Load);

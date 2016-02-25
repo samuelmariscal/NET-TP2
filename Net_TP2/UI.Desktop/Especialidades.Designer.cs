@@ -31,12 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Especialidades));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.dgvEspecialidades = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tsbActualizar = new System.Windows.Forms.ToolStripButton();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -78,16 +79,32 @@
             this.dgvEspecialidades.Size = new System.Drawing.Size(446, 250);
             this.dgvEspecialidades.TabIndex = 0;
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "id_especialidad";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "desc_especialidad";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 300;
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tsbModificar,
-            this.tsbEliminar});
+            this.tsbEliminar,
+            this.tsbActualizar});
             this.toolStrip1.Location = new System.Drawing.Point(3, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(112, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(135, 25);
             this.toolStrip1.TabIndex = 0;
             // 
             // tsbNuevo
@@ -108,6 +125,7 @@
             this.tsbModificar.Name = "tsbModificar";
             this.tsbModificar.Size = new System.Drawing.Size(23, 22);
             this.tsbModificar.Text = "Modificar";
+            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
             // 
             // tsbEliminar
             // 
@@ -117,21 +135,17 @@
             this.tsbEliminar.Name = "tsbEliminar";
             this.tsbEliminar.Size = new System.Drawing.Size(23, 22);
             this.tsbEliminar.Text = "Eliminar";
+            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
-            // ID
+            // tsbActualizar
             // 
-            this.ID.DataPropertyName = "id_especialidad";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "desc_especialidad";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 300;
+            this.tsbActualizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbActualizar.Image = ((System.Drawing.Image)(resources.GetObject("tsbActualizar.Image")));
+            this.tsbActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbActualizar.Name = "tsbActualizar";
+            this.tsbActualizar.Size = new System.Drawing.Size(23, 22);
+            this.tsbActualizar.Text = "Actualizar";
+            this.tsbActualizar.Click += new System.EventHandler(this.tsbActualizar_Click);
             // 
             // Especialidades
             // 
@@ -166,5 +180,6 @@
         private System.Windows.Forms.ToolStripButton tsbEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.ToolStripButton tsbActualizar;
     }
 }
