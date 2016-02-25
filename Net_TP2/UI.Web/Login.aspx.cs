@@ -32,7 +32,7 @@ namespace UI.Web
                 Session["Usuario"] = usu;
                 if (usu.TipoPersona.ToString() == "Alumno")
                 {                    
-                    Response.Redirect("Alumnos.aspx");
+                    Response.Redirect("Alumno/EstadoAcademico.aspx");
                 }
                 else if (usu.TipoPersona.ToString() == "Docente")
                 {

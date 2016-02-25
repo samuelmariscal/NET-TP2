@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Business.Entities;
+using Business.Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,16 @@ namespace UI.Web.Alumno
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null)
+            {
+                Response.Redirect("../Login.aspx");
+            }
+            Usuario usu = (Usuario)Session["Usuario"];
 
+            MateriaLogic ml = new MateriaLogic();
+            dgvPlanEstudio.AutoGenerateColumns = false;
+            dgvPlanEstudio.DataSource = ml.GetAll(UsuarioSesion.Sesion.IDPlan);
+            dgvPlanEstudio.DataBind();
         }
     }
 }

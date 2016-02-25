@@ -1,13 +1,18 @@
-﻿<%@ Master Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Alumnos.Master.cs" Inherits="UI.Web.Alumnos" %>
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Alumnos.Master.cs" Inherits="UI.Web.Alumnos" %>
 <%@ MasterType VirtualPath="~/Site.Master" %>
 <asp:Content ID="alumnos" ContentPlaceHolderID="cplCenter" runat="server">
+
+
+
     <ul class="nav nav-tabs" id="tablist">
-        <li class="alert-link"><a href="Alumnos.aspx">Home</a></li>
-        <li class="alert-link"><a href="Alumno/InscribirMateria.aspx">Inscribir a Materias</a></li>
-        <li class="alert-link"><a href="../EstadoAcademico.aspx">Estado Académico</a></li>
-        <li class="alert-link"><a href="../PlanEstudio.aspx">Plan de Estudio</a></li>
+        <li class="alert-link"><a href="../Alumno/EstadoAcademico.aspx">Home</a></li>
+        <li class="alert-link"><a href="../Alumno/InscribirMateria.aspx">Inscribir a Materias</a></li>
+        <li class="alert-link"><a href="../Alumno/EstadoAcademico.aspx">Estado Académico</a></li>
+        <li class="alert-link"><a href="../Alumno/PlanEstudio.aspx">Plan de Estudio</a></li>
         <li class="alert-link"><a href="Login.aspx">Cerrar Sesión</a></li>
     </ul>
+    <asp:ContentPlaceHolder ID="alumCenter" runat="server">
+        </asp:ContentPlaceHolder>
 
 </asp:Content>
 

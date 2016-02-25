@@ -41,9 +41,16 @@ namespace UI.Desktop
         {
             AlumnoInscripcion ai = new AlumnoInscripcion();
             ai.ID = (int)dgvAlumnosDocente.CurrentRow.Cells[0].Value;
-            ai.Condicion = dgvAlumnosDocente.CurrentRow.Cells[4].Value.ToString();
-            CalificarDesktop cd = new CalificarDesktop(ai);
-            cd.Show();
+            if (ai.ID != 0)
+            {
+                ai.Condicion = dgvAlumnosDocente.CurrentRow.Cells[4].Value.ToString();
+                CalificarDesktop cd = new CalificarDesktop(ai);
+                cd.Show();
+            }
+            else
+            {
+                MessageBox.Show("Seleccion alumno a calificar");
+            }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

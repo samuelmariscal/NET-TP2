@@ -22,21 +22,30 @@ namespace UI.Web.Alumno {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control ddlMaterias.
+        /// Control txtPlan.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMaterias;
+        protected global::System.Web.UI.WebControls.TextBox txtPlan;
         
         /// <summary>
-        /// Control dgvMaterias.
+        /// Control lblVacio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgvMaterias;
+        protected global::System.Web.UI.WebControls.Label lblVacio;
+        
+        /// <summary>
+        /// Control dgvCursosDisp.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dgvCursosDisp;
     }
 }
