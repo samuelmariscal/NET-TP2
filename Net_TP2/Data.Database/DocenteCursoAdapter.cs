@@ -14,7 +14,7 @@ namespace Data.Database
         {
             this.OpenConnection();
             DataTable dt = new DataTable();
-            MySqlCommand cmd = new MySqlCommand("select * from docentes_cursos where id_docente = @id", SqlConn);
+            MySqlCommand cmd = new MySqlCommand("select * from docentes_cursos dc inner join cursos c on dc.id_curso=c.id_curso where id_docente = @id", SqlConn);
             cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = idDocente;
             MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
             adap.Fill(dt);

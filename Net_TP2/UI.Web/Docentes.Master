@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Docentes.Master.cs" Inherits="UI.Web.Docentes" %>
+<%@ MasterType VirtualPath="~/Site.Master" %>
+<asp:Content ID="docentes" ContentPlaceHolderID="cplCenter" runat="server">
+
+
+
+    <ul class="nav nav-tabs" id="tablist">
+        <li class="alert-link"><a href="../Docente/Cursos.aspx">Inscribir a Cursos</a></li>
+        <li class="alert-link"><a href="../Docente/CursosInscripto.aspx">Mis Cursos</a></li>
+        <li class="alert-link"><a href="../Docente/Calificaciones.aspx">Calificar Alumnos</a></li>
+        <li class="alert-link"><a href="Login.aspx">Cerrar Sesión</a></li>
+    </ul>
+    <asp:ContentPlaceHolder ID="docCenter" runat="server">
+        </asp:ContentPlaceHolder>
+
+</asp:Content>

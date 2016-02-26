@@ -66,7 +66,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.17391F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 87.82609F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel2.Controls.Add(this.btnSalir, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnInscribir, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -80,7 +80,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(120, 3);
+            this.btnSalir.Location = new System.Drawing.Point(117, 3);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(81, 26);
             this.btnSalir.TabIndex = 1;
@@ -90,7 +90,7 @@
             // 
             // btnInscribir
             // 
-            this.btnInscribir.Location = new System.Drawing.Point(17, 3);
+            this.btnInscribir.Location = new System.Drawing.Point(16, 3);
             this.btnInscribir.Name = "btnInscribir";
             this.btnInscribir.Size = new System.Drawing.Size(87, 26);
             this.btnInscribir.TabIndex = 0;

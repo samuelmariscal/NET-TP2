@@ -36,7 +36,7 @@ namespace UI.Web
                 }
                 else if (usu.TipoPersona.ToString() == "Docente")
                 {
-                    Response.Redirect("Docentes.aspx");
+                    Response.Redirect("Docente/Cursos.aspx");
                 }
                 else 
                 {

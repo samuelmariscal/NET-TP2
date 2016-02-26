@@ -21,7 +21,7 @@
                     <asp:BoundField HeaderStyle-Font-Size="Larger" DataField="desc_comision" HeaderText="Comision" />
                     <asp:BoundField HeaderStyle-Font-Size="Larger" DataField="descripcion" HeaderText="Curso" />
                     <asp:BoundField HeaderStyle-Font-Size="Larger" DataField="cupo" HeaderText="Cupo" />
-                    <asp:ButtonField HeaderStyle-Font-Size="Larger" ControlStyle-CssClass="btn btn-info" Text="Inscribir" ButtonType="Button" HeaderText="Inscripción" CommandName="btnInscribir"   />                   
+                    <asp:ButtonField HeaderStyle-Font-Size="Larger" ControlStyle-CssClass="btn btn-info" Text="Inscribir" ButtonType="Button" HeaderText="Inscripción" CommandName="btnInscribir"   />
                 </Columns>
             </asp:GridView>           
         </div>
