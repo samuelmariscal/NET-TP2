@@ -199,6 +199,19 @@ namespace Data.Database
             CursoActual.State = BusinessEntity.States.Unmodified; 
         }
 
-        
+
+
+        public DataTable ValidarCurso(int idCurso, int usrID)
+        {
+            this.OpenConnection();
+            DataTable dt = new DataTable();
+            MySqlCommand cmd = new MySqlCommand("select * from docentes_cursos where id_curso = @idCurso and id_docente=@usrID", SqlConn);
+            cmd.Parameters.Add("@idCurso", MySqlDbType.Int32).Value = idCurso;
+            cmd.Parameters.Add("@usrID", MySqlDbType.Int32).Value = usrID;
+            MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
+            adap.Fill(dt);
+            this.CloseConnection();
+            return dt;
+        }
     }
 }

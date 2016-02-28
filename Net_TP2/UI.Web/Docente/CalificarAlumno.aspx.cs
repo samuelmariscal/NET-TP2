@@ -33,7 +33,7 @@ namespace UI.Web.Docente
                 InscripcionLogic il = new InscripcionLogic();
                 AlumnoInscripcion ai = new AlumnoInscripcion();
                 ai.ID = int.Parse(this.txtInscripcion.Text);
-                ai.Nota = int.Parse(this.ddlNotas.SelectedValue);
+                ai.Nota = int.Parse(this.ddlNotas.SelectedValue); //ARREGLAR
                 ai.Condicion = this.txtEstado.Text;
                 il.ActualizarInscripcion(ai);
                 Response.Redirect("Calificaciones.aspx");

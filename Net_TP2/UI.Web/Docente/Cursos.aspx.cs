@@ -36,9 +36,9 @@ namespace UI.Web.Docente
 
         protected void dgvCursos_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-
             if (e.CommandName == "btnInscribir")
-            {  
+            {
+                CursoLogic cl = new CursoLogic();
                 DocenteCurso dc = new DocenteCurso();
                 dgvCursos.SelectedIndex = Convert.ToInt32(e.CommandArgument);
                 GridViewRow row = dgvCursos.SelectedRow;
@@ -47,8 +47,15 @@ namespace UI.Web.Docente
                 dc.IDDocente=UsuarioSesion.Sesion.ID;
                 DropDownList ddlCargos = (DropDownList)dgvCursos.SelectedRow.FindControl("ddlCargos");
                 dc.Cargo = (DocenteCurso.TiposCargos)ddlCargos.DataSource;
-                DocenteCursoLogic dcl = new DocenteCursoLogic();
-                dcl.AgregarDocenteACurso(dc);                
+                if (cl.ValidarCurso(int.Parse(idCurso), UsuarioSesion.Sesion.ID).Rows.Count == 0)
+                {
+                    DocenteCursoLogic dcl = new DocenteCursoLogic();
+                    dcl.AgregarDocenteACurso(dc);
+                }
+                else
+                {
+                    //mensaje de error
+                }
             }
         }
     }

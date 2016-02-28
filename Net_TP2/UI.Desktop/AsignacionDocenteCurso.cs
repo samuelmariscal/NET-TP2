@@ -1,4 +1,5 @@
-﻿using Business.Logic;
+﻿using Business.Entities;
+using Business.Logic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,9 +45,17 @@ namespace UI.Desktop
 
         private void btnInscribir_Click(object sender, EventArgs e)
         {
+            CursoLogic cl = new CursoLogic();
             int idCurso = (int)dgvCursos.CurrentRow.Cells[0].Value;
-            AsignacionDocenteDesktop add = new AsignacionDocenteDesktop(idCurso);
-            add.Show();
+            if (cl.ValidarCurso(idCurso, UsuarioSesion.Sesion.ID).Rows.Count == 0)
+            {
+                AsignacionDocenteDesktop add = new AsignacionDocenteDesktop(idCurso);
+                add.Show();
+            }
+            else
+            {
+                MessageBox.Show("Usted ya esta inscripto en este curso");
+            }
 
         }
     }

@@ -21,6 +21,11 @@ namespace Business.Logic
             return CursoData.GetAll(idCom);
         }
 
+        public DataTable ValidarCurso(int idCurso, int usrID)
+        {
+            return CursoData.ValidarCurso(idCurso, usrID);
+        }
+
         public DataTable DameCursosAInscribir(int idPlan, int usrID)
         {
             return CursoData.GetCursosAInscribir(idPlan, usrID);
