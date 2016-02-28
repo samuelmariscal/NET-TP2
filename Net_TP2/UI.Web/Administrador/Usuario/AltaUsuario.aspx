@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="AltaUsuario.aspx.cs" Inherits="UI.Web.Administrador.AltaUsuario" %>
 <asp:Content ID="admin" ContentPlaceHolderID="adminCenter" runat="server">
 
-   <form id="formAlta" runat="server">
+
    
        <br />
        <br />
@@ -34,8 +34,7 @@
             <asp:Button runat="server" ID="btnVolver" Text="Volver" />
              </p>
         </div>
-       
-   </form>
+
 
 
 </asp:Content>

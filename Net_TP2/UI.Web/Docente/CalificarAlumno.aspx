@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Docentes.Master" AutoEventWireup="true" CodeBehind="CalificarAlumno.aspx.cs" Inherits="UI.Web.Docente.CalificarAlumno" %>
 <asp:Content ID="docentes" ContentPlaceHolderID="docCenter" runat="server">
 
-    <form id="formAlta" runat="server">
+
     
        <br />
        <br />
@@ -25,6 +25,5 @@
             <asp:Button runat="server" ID="btnCalificar" Text="Calificar" OnClick="btnCalificar_Click" />                        
              </p>
         </div>
-       
-   </form>
+
 </asp:Content>

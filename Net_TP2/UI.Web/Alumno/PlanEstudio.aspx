@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Alumnos.Master" AutoEventWireup="true" CodeBehind="PlanEstudio.aspx.cs" Inherits="UI.Web.Alumno.PlanEstudio" %>
 <asp:Content ID="alumnos" ContentPlaceHolderID="alumCenter" runat="server">
 
-    <form id="form1" runat="server">
+
     
     <br />
     <br />
@@ -20,5 +20,5 @@
                 </Columns>
             </asp:GridView>           
         </div>
-       </center>
-    </form></asp:Content>
+       </center>    
+</asp:Content>

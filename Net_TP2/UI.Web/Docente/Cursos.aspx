@@ -1,17 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Docentes.Master" AutoEventWireup="true" CodeBehind="Cursos.aspx.cs" Inherits="UI.Web.Docente.Cursos" %>
 <asp:Content ID="docentes" ContentPlaceHolderID="docCenter" runat="server">
 
-    <form id="form1" runat="server">
+
     
     <br />
     <br />
     <br />
     <b style="text-align:center">Cursos</b>
         <br />
+        <b><asp:Label runat="server" CssClass="label-warning" ID="lblVacio" Visible="false"></asp:Label></b>
         <br />
        <center>
            <div style="justify-content:center">
-            <asp:GridView ID="dgvCursos" CssClass="table table-hover"  runat="server" AutoGenerateColumns="False" Width="616px" OnRowDataBound="dgvCursos_OnRowDataBound" OnRowCommand="dgvCursos_RowCommand">
+            <asp:GridView ID="dgvCursos" CssClass="table table-hover"  runat="server" AutoGenerateColumns="False" Width="616px" OnRowCommand="dgvCursos_RowCommand" >
                 <Columns>
                     <asp:BoundField HeaderStyle-Font-Size="Larger" DataField="id_curso" HeaderText="ID Curso" />
                     <asp:BoundField HeaderStyle-Font-Size="Larger" DataField="descripcion" HeaderText="Descripcion" />
@@ -28,5 +29,5 @@
             </asp:GridView>           
         </div>
        </center>
-    </form>
+
 </asp:Content>

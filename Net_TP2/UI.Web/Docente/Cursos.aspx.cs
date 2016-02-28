@@ -21,6 +21,7 @@ namespace UI.Web.Docente
 
             dgvCursos.DataSource = new CursoLogic().DameCursos();
             dgvCursos.DataBind();
+            this.lblVacio.Text = "";
         }
 
         protected void dgvCursos_OnRowDataBound(object sender, GridViewRowEventArgs e)
@@ -40,21 +41,39 @@ namespace UI.Web.Docente
             {
                 CursoLogic cl = new CursoLogic();
                 DocenteCurso dc = new DocenteCurso();
+                int index = Convert.ToInt32(e.CommandArgument);
                 dgvCursos.SelectedIndex = Convert.ToInt32(e.CommandArgument);
                 GridViewRow row = dgvCursos.SelectedRow;
                 string idCurso = row.Cells[0].Text;
                 dc.IDCurso = int.Parse(idCurso);
                 dc.IDDocente=UsuarioSesion.Sesion.ID;
-                DropDownList ddlCargos = (DropDownList)dgvCursos.SelectedRow.FindControl("ddlCargos");
-                dc.Cargo = (DocenteCurso.TiposCargos)ddlCargos.DataSource;
+                DropDownList ddlCargos = (DropDownList)dgvCursos.Rows[index].FindControl("ddlCargos");
+                if (ddlCargos.SelectedItem.Text == DocenteCurso.TiposCargos.Suplente.ToString())
+                {
+                    dc.Cargo = DocenteCurso.TiposCargos.Suplente;
+                }
+                else if (ddlCargos.SelectedItem.Text == DocenteCurso.TiposCargos.Adjunto.ToString())
+                {
+                    dc.Cargo = DocenteCurso.TiposCargos.Adjunto;
+                }
+                else if (ddlCargos.SelectedItem.Text == DocenteCurso.TiposCargos.Titular.ToString())
+                {
+                    dc.Cargo = DocenteCurso.TiposCargos.Titular;
+                }
+                else
+                {
+                    dc.Cargo = BusinessEntity.TiposCargos.Ayudante;
+                }
+
                 if (cl.ValidarCurso(int.Parse(idCurso), UsuarioSesion.Sesion.ID).Rows.Count == 0)
                 {
+                    this.lblVacio.Text = "Inscripcion realizada";
                     DocenteCursoLogic dcl = new DocenteCursoLogic();
                     dcl.AgregarDocenteACurso(dc);
                 }
                 else
                 {
-                    //mensaje de error
+                    this.lblVacio.Text = "Error, Ya esta inscripto en este curso";
                 }
             }
         }

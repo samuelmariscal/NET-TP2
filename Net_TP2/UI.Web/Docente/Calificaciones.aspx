@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Docentes.Master" AutoEventWireup="true" CodeBehind="Calificaciones.aspx.cs" Inherits="UI.Web.Docente.Calificar" %>
 <asp:Content ID="docentes" ContentPlaceHolderID="docCenter" runat="server">
-    <form id="form1" runat="server">
-    
+
     <br />
     <br />
     <br />
@@ -23,5 +22,5 @@
             </asp:GridView>           
         </div>
        </center>
-    </form>
+
 </asp:Content>

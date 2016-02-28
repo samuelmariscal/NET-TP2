@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="AltaMateria.aspx.cs" Inherits="UI.Web.Administrador.PlanesMaterias.AltaMateria" %>
 <asp:Content ID="admin" ContentPlaceHolderID="adminCenter" runat="server">
 
-    <form id="formAlta" runat="server">
+
      
        <br />
        <br />
@@ -27,5 +27,5 @@
              </p>
         </div>
        
-   </form>
+
 </asp:Content>

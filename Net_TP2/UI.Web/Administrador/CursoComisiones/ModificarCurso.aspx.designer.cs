@@ -13,15 +13,6 @@ namespace UI.Web.Administrador.CursoComisiones {
     public partial class ModificarCurso {
         
         /// <summary>
-        /// Control formAlta.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formAlta;
-        
-        /// <summary>
         /// Control txtPlan.
         /// </summary>
         /// <remarks>

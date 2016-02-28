@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Alumnos.Master" AutoEventWireup="true" CodeBehind="InscribirMateria.aspx.cs" Inherits="UI.Web.Alumno.InscribirMateria" %>
 <asp:Content ID="alumnos" ContentPlaceHolderID="alumCenter" runat="server">
-    <form id="form1" runat="server">
+
     
     <br />
     <br />
@@ -26,7 +26,6 @@
             </asp:GridView>           
         </div>
        </center>
-    </form>
 
 
 </asp:Content>

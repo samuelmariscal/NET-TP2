@@ -22,6 +22,14 @@ namespace UI.Web
             this.Master.Bienvenido = usu.Nombre;
             
         }
+
+        protected void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();            
+            HttpContext.Current.Response.Redirect("../Login.aspx", true); 
+        }
+
+
         
     }
 }

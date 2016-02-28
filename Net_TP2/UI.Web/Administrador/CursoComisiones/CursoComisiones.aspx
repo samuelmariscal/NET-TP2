@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="CursoComisiones.aspx.cs" Inherits="UI.Web.Administrador.CursoComisiones.CursoComisiones" %>
 <asp:Content ID="admin" ContentPlaceHolderID="adminCenter" runat="server">
-     <form id="form1" runat="server">
+
     
     <br />
     <br />
@@ -38,5 +38,5 @@
            </p>
         </div>
        </center>
-    </form>
+
 </asp:Content>

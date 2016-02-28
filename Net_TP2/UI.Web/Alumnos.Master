@@ -2,18 +2,18 @@
 <%@ MasterType VirtualPath="~/Site.Master" %>
 <asp:Content ID="alumnos" ContentPlaceHolderID="cplCenter" runat="server">
 
-
+    <form id="form1" runat="server">
 
     <ul class="nav nav-tabs" id="tablist">
         <li class="alert-link"><a href="../Alumno/EstadoAcademico.aspx">Home</a></li>
         <li class="alert-link"><a href="../Alumno/InscribirMateria.aspx">Inscribir a Materias</a></li>
         <li class="alert-link"><a href="../Alumno/EstadoAcademico.aspx">Estado Académico</a></li>
         <li class="alert-link"><a href="../Alumno/PlanEstudio.aspx">Plan de Estudio</a></li>
-        <li class="alert-link"><a href="Login.aspx">Cerrar Sesión</a></li>
+        <li class="alert-link"><asp:LinkButton runat="server" Text="Cerrar Sesion" OnClick="btnCerrarSesion_Click" ID="cerrarSesion"></asp:LinkButton></li>     
     </ul>
     <asp:ContentPlaceHolder ID="alumCenter" runat="server">
         </asp:ContentPlaceHolder>
-
+    </form>
 </asp:Content>
 
 
