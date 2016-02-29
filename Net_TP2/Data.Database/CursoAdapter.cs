@@ -30,7 +30,7 @@ namespace Data.Database
             DataTable dt = new DataTable();
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM cursos inner join comisiones inner join materias "+
                 "on cursos.id_comision=comisiones.id_comision and cursos.id_materia=materias.id_materia "+
-                "where comisiones.id_plan=@id and cursos.cupo>=0 and id_curso not in "+
+                "where materias.id_plan=@id and cursos.cupo>=0 and id_curso not in "+
                 "(select id_curso from alumnos_inscripciones where id_alumno=@id_usr)", SqlConn);
             cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = idPlan;
             cmd.Parameters.Add("@id_usr", MySqlDbType.Int32).Value = idUsr;
