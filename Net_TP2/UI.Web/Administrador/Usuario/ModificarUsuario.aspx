@@ -25,8 +25,7 @@
             <br />
             <label>Plan:</label>
             <asp:DropDownList runat="server" ID="ddlPlan" Height="20px" Width="125px"></asp:DropDownList><br />
-            <label>Fecha de nacimiento:</label>
-            <asp:TextBox runat="server" ID="txtFechaNacimiento" class="form-control"></asp:TextBox>
+            
             <br /> <br />
             <p>
             <asp:Button runat="server" ID="btnGuardar" Text="Guardar" OnClick="btnGuardar_Click" />

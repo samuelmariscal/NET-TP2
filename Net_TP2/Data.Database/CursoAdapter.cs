@@ -114,7 +114,8 @@ namespace Data.Database
         {
             this.OpenConnection();
             DataTable dt = new DataTable();
-            MySqlCommand cmd = new MySqlCommand("select * from cursos c inner join comisiones com on c.id_comision=com.id_comision", SqlConn);
+            MySqlCommand cmd = new MySqlCommand("select * from cursos c inner join comisiones com on c.id_comision=com.id_comision "+
+                "group by c.id_curso", SqlConn);
             MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
             adap.Fill(dt);
             this.CloseConnection();

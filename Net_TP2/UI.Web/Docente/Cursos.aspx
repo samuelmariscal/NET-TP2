@@ -12,7 +12,7 @@
         <br />
        <center>
            <div style="justify-content:center">
-            <asp:GridView ID="dgvCursos" CssClass="table table-hover"  runat="server" AutoGenerateColumns="False" Width="616px" OnRowCommand="dgvCursos_RowCommand" >
+            <asp:GridView ID="dgvCursos" CssClass="table table-hover"  runat="server" AutoGenerateColumns="False" Width="616px" OnRowCommand="dgvCursos_RowCommand" OnRowDataBound="dgvCursos_OnRowDataBound" >
                 <Columns>
                     <asp:BoundField HeaderStyle-Font-Size="Larger" DataField="id_curso" HeaderText="ID Curso" />
                     <asp:BoundField HeaderStyle-Font-Size="Larger" DataField="descripcion" HeaderText="Descripcion" />

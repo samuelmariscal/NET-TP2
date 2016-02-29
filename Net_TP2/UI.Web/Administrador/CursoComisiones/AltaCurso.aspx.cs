@@ -46,7 +46,7 @@ namespace UI.Web.Administrador.CursoComisiones
         {
             Curso cur = new Curso();
             CursoActual = cur;
-            cur.IDComision = int.Parse(this.txtComision.Text);
+            cur.IDComision = Convert.ToInt32(Request.QueryString["comision"]);
             cur.IDMateria = int.Parse(this.ddlMaterias.SelectedValue);
             cur.Descripcion = this.txtDescripcion.Text;
             cur.Cupo = int.Parse(this.txtCupo.Text);
