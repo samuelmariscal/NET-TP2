@@ -28,8 +28,6 @@ namespace UI.Web
             Session.Abandon();            
             HttpContext.Current.Response.Redirect("../Login.aspx", true); 
         }
-
-
         
     }
 }

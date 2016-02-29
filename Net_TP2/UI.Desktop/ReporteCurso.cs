@@ -1,36 +1,34 @@
-﻿using System;
+﻿using Business.Logic;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Business.Entities;
-using Business.Logic;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using System.Diagnostics;
-using System.IO;
-
 
 namespace UI.Desktop
 {
-    public partial class Usuarios : ApplicationForm
+    public partial class ReporteCurso : ApplicationForm
     {
-        public Usuarios()
+        public ReporteCurso()
         {
             InitializeComponent();
-            this.dgvUsuarios.AutoGenerateColumns = false;
+            this.dgvReporteCursos.AutoGenerateColumns = false;
         }
 
         public void Listar()
         {
             try
             {
-                UsuarioLogic ul = new UsuarioLogic();
-                this.dgvUsuarios.DataSource = ul.GetAll();
+                CursoLogic cl = new CursoLogic();
+                this.dgvReporteCursos.DataSource = cl.GetAllRep();
             }
             catch (Exception Ex)
             {
@@ -38,58 +36,14 @@ namespace UI.Desktop
             }
 
         }
-
-        private void Usuarios_Load(object sender, EventArgs e)
+        private void ReporteCurso_Load(object sender, EventArgs e)
         {
             Listar();
         }
 
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            Listar();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void tsbNuevo_Click(object sender, EventArgs e)
-        {
-            UsuarioDesktop ud = new UsuarioDesktop(ApplicationForm.ModoForm.Alta);
-            ud.ShowDialog();
-            this.Listar();
-        }
-
-        private void tsbEditar_Click(object sender, EventArgs e)
-        {
-            int id = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
-            UsuarioDesktop ud = new UsuarioDesktop(id, ApplicationForm.ModoForm.Modificacion);
-            ud.ShowDialog();
-            this.Listar();
-        }
-
-        private void tsbEliminar_Click(object sender, EventArgs e)
-        {
-            int id = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
-            if (MessageBox.Show("¿Está seguro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
-            {
-                UsuarioDesktop ud = new UsuarioDesktop(id, ApplicationForm.ModoForm.Baja);
-            }
-            this.Listar();
-
-        }
-
-        private void tscUsuarios_TopToolStripPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void btnGenerarRep_Click(object sender, EventArgs e)
         {
             this.reportePDF();
-
         }
 
         private void reportePDF()
@@ -119,7 +73,7 @@ namespace UI.Desktop
                 string remito = "Autorizo: Administrador";
                 string envio = "Fecha:" + DateTime.Now.ToString();
 
-                Chunk chunk = new Chunk("Reporte de General Usuarios", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD));
+                Chunk chunk = new Chunk("Reporte General de Cursos", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD));
                 doc.Add(new Paragraph(chunk));
                 doc.Add(new Paragraph("                       "));
                 doc.Add(new Paragraph("                       "));
@@ -133,36 +87,37 @@ namespace UI.Desktop
                 doc.Add(new Paragraph("                       "));
                 GenerarDocumento(doc);
                 doc.AddCreationDate();
-                doc.Add(new Paragraph("______________________________________________", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD)));
+                doc.Add(new Paragraph("_______________________________________________________________", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD)));
                 doc.Add(new Paragraph("Firma", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD)));
                 doc.Close();
                 Process.Start(filename);
             }
 
         }
+
         public void GenerarDocumento(Document document)
         {
             int i, j;
-            PdfPTable datatable = new PdfPTable(this.dgvUsuarios.ColumnCount);
+            PdfPTable datatable = new PdfPTable(this.dgvReporteCursos.ColumnCount);
             datatable.DefaultCell.Padding = 3;
-            float[] headerwidths = GetTamañoColumnas(this.dgvUsuarios);
+            float[] headerwidths = GetTamañoColumnas(this.dgvReporteCursos);
             datatable.SetWidths(headerwidths);
             datatable.WidthPercentage = 100;
             datatable.DefaultCell.BorderWidth = 2;
             datatable.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
-            for (i = 0; i < this.dgvUsuarios.ColumnCount; i++)
+            for (i = 0; i < this.dgvReporteCursos.ColumnCount; i++)
             {
-                datatable.AddCell(this.dgvUsuarios.Columns[i].HeaderText);
+                datatable.AddCell(this.dgvReporteCursos.Columns[i].HeaderText);
             }
             datatable.HeaderRows = 1;
             datatable.DefaultCell.BorderWidth = 1;
-            for (i = 0; i < this.dgvUsuarios.Rows.Count; i++)
+            for (i = 0; i < this.dgvReporteCursos.Rows.Count; i++)
             {
-                for (j = 0; j < this.dgvUsuarios.Columns.Count; j++)
+                for (j = 0; j < this.dgvReporteCursos.Columns.Count; j++)
                 {
-                    if (this.dgvUsuarios[j, i].Value != null)
+                    if (this.dgvReporteCursos[j, i].Value != null)
                     {
-                        datatable.AddCell(new Phrase(this.dgvUsuarios[j, i].Value.ToString()));//En esta parte, se esta agregando un renglon por cada registro en el datagrid
+                        datatable.AddCell(new Phrase(this.dgvReporteCursos[j, i].Value.ToString()));//En esta parte, se esta agregando un renglon por cada registro en el datagrid
                     }
                 }
                 datatable.CompleteRow();

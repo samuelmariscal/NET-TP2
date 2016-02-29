@@ -142,12 +142,10 @@ namespace UI.Desktop
             rc.Show();
         }
 
-        private void cursosToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void rptCursosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ReporteCurso repcur = new ReporteCurso();
+            repcur.Show();
         }
-
-
-
     }
 }

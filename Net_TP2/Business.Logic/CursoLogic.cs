@@ -66,5 +66,10 @@ namespace Business.Logic
         {
             CursoData.Delete(id);
         }
+
+        public DataTable GetAllRep()
+        {
+           return CursoData.GetAllRep();
+        }
     }
 }

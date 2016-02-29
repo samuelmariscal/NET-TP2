@@ -213,5 +213,19 @@ namespace Data.Database
             this.CloseConnection();
             return dt;
         }
+
+        public DataTable GetAllRep()
+        {
+            this.OpenConnection();
+            DataTable dt = new DataTable();
+            MySqlCommand cmd = new MySqlCommand("select c.id_curso, c.anio_calendario, c.cupo, c.descripcion, c.id_materia, com.desc_comision, " +
+                "p.nombre, p.apellido from cursos c left join docentes_cursos dc on c.id_curso=dc.id_curso " +
+                "left join personas p on p.id_persona=dc.id_docente left join comisiones com on com.id_comision=c.id_comision "+
+                "group by c.id_curso", SqlConn);            
+            MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
+            adap.Fill(dt);
+            this.CloseConnection();
+            return dt;
+        }
     }
 }

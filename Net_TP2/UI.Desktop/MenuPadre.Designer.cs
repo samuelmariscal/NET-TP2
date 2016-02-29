@@ -39,7 +39,7 @@
             this.planesYMateriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiReportes = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.rptCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mejoresPromediosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAlumno = new System.Windows.Forms.ToolStripMenuItem();
@@ -142,19 +142,19 @@
             // tsmiReportes
             // 
             this.tsmiReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cursosToolStripMenuItem1,
+            this.rptCursosToolStripMenuItem,
             this.planesToolStripMenuItem,
             this.mejoresPromediosToolStripMenuItem});
             this.tsmiReportes.Name = "tsmiReportes";
             this.tsmiReportes.Size = new System.Drawing.Size(65, 20);
             this.tsmiReportes.Text = "Reportes";
             // 
-            // cursosToolStripMenuItem1
+            // rptCursosToolStripMenuItem
             // 
-            this.cursosToolStripMenuItem1.Name = "cursosToolStripMenuItem1";
-            this.cursosToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
-            this.cursosToolStripMenuItem1.Text = "Cursos";
-            this.cursosToolStripMenuItem1.Click += new System.EventHandler(this.cursosToolStripMenuItem1_Click);
+            this.rptCursosToolStripMenuItem.Name = "rptCursosToolStripMenuItem";
+            this.rptCursosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.rptCursosToolStripMenuItem.Text = "Cursos";
+            this.rptCursosToolStripMenuItem.Click += new System.EventHandler(this.rptCursosToolStripMenuItem_Click);
             // 
             // planesToolStripMenuItem
             // 
@@ -211,14 +211,14 @@
             // tsbInscribirACurso
             // 
             this.tsbInscribirACurso.Name = "tsbInscribirACurso";
-            this.tsbInscribirACurso.Size = new System.Drawing.Size(147, 22);
+            this.tsbInscribirACurso.Size = new System.Drawing.Size(152, 22);
             this.tsbInscribirACurso.Text = "Cursos";
             this.tsbInscribirACurso.Click += new System.EventHandler(this.tsbInscribirACurso_Click);
             // 
             // calificacionesToolStripMenuItem
             // 
             this.calificacionesToolStripMenuItem.Name = "calificacionesToolStripMenuItem";
-            this.calificacionesToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.calificacionesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.calificacionesToolStripMenuItem.Text = "Calificaciones";
             this.calificacionesToolStripMenuItem.Click += new System.EventHandler(this.calificacionesToolStripMenuItem_Click);
             // 
@@ -280,7 +280,7 @@
         private System.Windows.Forms.ToolStripMenuItem planesYMateriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiReportes;
-        private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem rptCursosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem planesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mejoresPromediosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiAlumno;

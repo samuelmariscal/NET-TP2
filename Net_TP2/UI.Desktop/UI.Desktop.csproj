@@ -184,6 +184,12 @@
     <Compile Include="RegistroCalificaciones.Designer.cs">
       <DependentUpon>RegistroCalificaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteCurso.Designer.cs">
+      <DependentUpon>ReporteCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroCalificaciones.resx">
       <DependentUpon>RegistroCalificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCurso.resx">
+      <DependentUpon>ReporteCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioDesktop.resx">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>
