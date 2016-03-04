@@ -32,5 +32,10 @@ namespace Business.Logic
         {
             PlanData.Add(p);
         }
+
+        public void AddPlan(Plan p, List<Materia> materias)
+        {
+            PlanData.Add(p, materias);
+        }
     }
 }

@@ -44,5 +44,10 @@ namespace Business.Logic
             return EspecialidadData.GetOne(idEspecialidad);
         }
 
+
+        public DataTable GetAll()
+        {
+            return EspecialidadData.GetAll();
+        }
     }
 }

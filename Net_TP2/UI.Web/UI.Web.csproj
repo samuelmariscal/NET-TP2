@@ -65,6 +65,7 @@
     <Content Include="Administrador\Especialidades\ModificarEspecialidad.aspx" />
     <Content Include="Administrador\PlanesMaterias2\AltaMateria2.aspx" />
     <Content Include="Administrador\PlanesMaterias2\AltaPlan.aspx" />
+    <Content Include="Administrador\PlanesMaterias2\Planes.aspx" />
     <Content Include="Administrador\PlanesMaterias\AltaMateria.aspx" />
     <Content Include="Administrador\PlanesMaterias\Materias.aspx" />
     <Content Include="Administrador\PlanesMaterias\ModificarMateria.aspx" />
@@ -166,6 +167,13 @@
     </Compile>
     <Compile Include="Administrador\PlanesMaterias2\AltaPlan.aspx.designer.cs">
       <DependentUpon>AltaPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\PlanesMaterias2\Planes.aspx.cs">
+      <DependentUpon>Planes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\PlanesMaterias2\Planes.aspx.designer.cs">
+      <DependentUpon>Planes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administrador\PlanesMaterias\AltaMateria.aspx.cs">
       <DependentUpon>AltaMateria.aspx</DependentUpon>

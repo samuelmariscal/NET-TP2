@@ -22,6 +22,15 @@ namespace UI.Web.Administrador.PlanesMaterias2 {
         protected global::System.Web.UI.WebControls.TextBox txtDescPlan;
         
         /// <summary>
+        /// Control ddlEspecialidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlEspecialidad;
+        
+        /// <summary>
         /// Control dgvMaterias.
         /// </summary>
         /// <remarks>
@@ -38,5 +47,14 @@ namespace UI.Web.Administrador.PlanesMaterias2 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAlta;
+        
+        /// <summary>
+        /// Control btnAgregarPlan.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAgregarPlan;
     }
 }

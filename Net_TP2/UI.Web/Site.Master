@@ -20,8 +20,8 @@
             <br />
             <h2 style="padding-left:10%; color:White;" >Academia:
                 <small style="color:gray">Sistema de Autogestión</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label1" runat="server" Font-Bold="False" Font-Italic="True" Font-Overline="False" Font-Size="Medium" ForeColor="#3333FF" Text="Bienvenido,"></asp:Label>
-&nbsp;<asp:Label ID="txtBienvenido" runat="server" CssClass="text-capitalize" Font-Size="Medium" ForeColor="#3333FF" Text=" " Visible="True"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Font-Bold="False" Font-Italic="True" Font-Overline="False" Font-Size="Medium" ForeColor="#FFF" Text="Bienvenido"></asp:Label>
+&nbsp;<asp:Label ID="txtBienvenido" runat="server" CssClass="text-capitalize" Font-Size="Medium" ForeColor="#FFF" Text=" " Visible="True"></asp:Label>
             </h2>
         </div>
         <div class="login-body">

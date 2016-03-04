@@ -58,7 +58,7 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                MySqlCommand cmdSave = new MySqlCommand("insert into planes (desc_plan,id_especialidad)" +
+                MySqlCommand cmdSave = new MySqlCommand("insert into planes (desc_plan,id_especialidad) " +
                 "values (@desc_plan,@id_especialidad)", SqlConn); 
 
                 cmdSave.Parameters.Add("@desc_plan", MySqlDbType.VarChar, 50).Value = p.Descripcion;
@@ -77,5 +77,49 @@ namespace Data.Database
             }
         }
 
+
+        public void Add(Plan p, List<Materia> materias)
+        {
+            this.OpenConnection();
+            MySqlTransaction trans = SqlConn.BeginTransaction();
+            try
+            {                
+                long idPlan;
+                {
+                    MySqlCommand cmd = new MySqlCommand("insert into planes (desc_plan,id_especialidad) " +
+                    "values (@desc_plan,@id_especialidad)", SqlConn,trans);
+                    cmd.Parameters.Add("@desc_plan", MySqlDbType.VarChar, 50).Value = p.Descripcion;
+                    cmd.Parameters.Add("@id_especialidad", MySqlDbType.Int32).Value=p.IDEspecialidad;
+                    cmd.ExecuteNonQuery();
+                    idPlan = cmd.LastInsertedId;
+                    cmd.Parameters.Clear();                    
+                }               
+                foreach (var materia in materias)
+                {
+                    {
+                        MySqlCommand cmd = new MySqlCommand("insert into materias (desc_materia, hs_semanales, hs_totales, id_plan) "+
+                            "values (@desc_materias,@hs_semanales,@hs_totales,@id_plan)", SqlConn, trans);
+                        cmd.Parameters.Add("@desc_materias", MySqlDbType.VarChar, 50).Value = materia.Descripcion;
+                        cmd.Parameters.Add("@hs_semanales", MySqlDbType.Int32).Value = materia.HSSemanales;
+                        cmd.Parameters.Add("@hs_totales", MySqlDbType.Int32).Value = materia.HSTotales;
+                        cmd.Parameters.Add("@id_plan", MySqlDbType.Int32).Value = idPlan;
+                        cmd.ExecuteNonQuery();
+                        cmd.Parameters.Clear();
+                    }
+                }                
+                trans.Commit();
+            }
+            catch(Exception Ex)
+            {
+                trans.Rollback();
+                Exception ExcepcionManejada = new Exception("Error al crear el plan", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
+        
     }
 }
