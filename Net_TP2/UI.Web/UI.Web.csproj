@@ -63,6 +63,8 @@
     <Content Include="Administrador\Especialidades\AltaEspecialidad.aspx" />
     <Content Include="Administrador\Especialidades\Especialidades.aspx" />
     <Content Include="Administrador\Especialidades\ModificarEspecialidad.aspx" />
+    <Content Include="Administrador\PlanesMaterias2\AltaMateria2.aspx" />
+    <Content Include="Administrador\PlanesMaterias2\AltaPlan.aspx" />
     <Content Include="Administrador\PlanesMaterias\AltaMateria.aspx" />
     <Content Include="Administrador\PlanesMaterias\Materias.aspx" />
     <Content Include="Administrador\PlanesMaterias\ModificarMateria.aspx" />
@@ -150,6 +152,20 @@
     </Compile>
     <Compile Include="Administrador\Especialidades\ModificarEspecialidad.aspx.designer.cs">
       <DependentUpon>ModificarEspecialidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\PlanesMaterias2\AltaMateria2.aspx.cs">
+      <DependentUpon>AltaMateria2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\PlanesMaterias2\AltaMateria2.aspx.designer.cs">
+      <DependentUpon>AltaMateria2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\PlanesMaterias2\AltaPlan.aspx.cs">
+      <DependentUpon>AltaPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\PlanesMaterias2\AltaPlan.aspx.designer.cs">
+      <DependentUpon>AltaPlan.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administrador\PlanesMaterias\AltaMateria.aspx.cs">
       <DependentUpon>AltaMateria.aspx</DependentUpon>

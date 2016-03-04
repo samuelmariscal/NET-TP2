@@ -1,6 +1,7 @@
 ﻿using Business.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -20,6 +21,7 @@ namespace UI.Web
   
             Usuario usu = (Usuario)Session["Usuario"];
             this.Master.Bienvenido = usu.Nombre;
+            
             
         }
 

@@ -1,13 +1,3 @@
-C:\Users\Samuel\Desktop\Facultad 2015\NET\NET\Net_TP2\Business.Entities\bin\Debug\Business.Entities.dll
-C:\Users\Samuel\Desktop\Facultad 2015\NET\NET\Net_TP2\Business.Entities\bin\Debug\Business.Entities.pdb
-C:\Users\Samuel\Desktop\Facultad 2015\NET\NET\Net_TP2\Business.Entities\obj\Debug\Business.Entities.csprojResolveAssemblyReference.cache
-C:\Users\Samuel\Desktop\Facultad 2015\NET\NET\Net_TP2\Business.Entities\obj\Debug\Business.Entities.dll
-C:\Users\Samuel\Desktop\Facultad 2015\NET\NET\Net_TP2\Business.Entities\obj\Debug\Business.Entities.pdb
-C:\Users\Lisandro\Documents\GitHub\NET-TP2\Net_TP2\Business.Entities\bin\Debug\Business.Entities.dll
-C:\Users\Lisandro\Documents\GitHub\NET-TP2\Net_TP2\Business.Entities\bin\Debug\Business.Entities.pdb
-C:\Users\Lisandro\Documents\GitHub\NET-TP2\Net_TP2\Business.Entities\obj\Debug\Business.Entities.csprojResolveAssemblyReference.cache
-C:\Users\Lisandro\Documents\GitHub\NET-TP2\Net_TP2\Business.Entities\obj\Debug\Business.Entities.dll
-C:\Users\Lisandro\Documents\GitHub\NET-TP2\Net_TP2\Business.Entities\obj\Debug\Business.Entities.pdb
 C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\Business.Entities\bin\Debug\Business.Entities.dll
 C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\Business.Entities\bin\Debug\Business.Entities.pdb
 C:\Users\Samuel\Documents\GitHub\NET-TP2\Net_TP2\Business.Entities\obj\Debug\Business.Entities.csprojResolveAssemblyReference.cache

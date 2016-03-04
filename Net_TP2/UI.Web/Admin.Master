@@ -7,7 +7,7 @@
         <li class="alert-link"><a href="../Usuario/Usuarios.aspx">Home</a></li>
         <li class="alert-link"><a href="../Usuario/Usuarios.aspx">Ver Usuarios</a></li>
         <li class="alert-link"><a href="../Especialidades/Especialidades.aspx">Especialidades</a></li>
-        <li class="alert-link"><a href="../PlanesMaterias/Materias.aspx">Planes y Materias</a></li>
+        <li class="alert-link"><a href="../PlanesMaterias2/AltaPlan.aspx">Planes y Materias</a></li>
         <li class="alert-link"><a href="../CursoComisiones/CursoComisiones.aspx">Cursos y Comisiones</a></li>       
        <li class="alert-link"><asp:LinkButton runat="server" Text="Cerrar Sesion" OnClick="btnCerrarSesion_Click" ID="cerrarSesion"></asp:LinkButton></li>     
         
