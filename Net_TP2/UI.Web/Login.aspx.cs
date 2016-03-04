@@ -41,8 +41,6 @@ namespace UI.Web
                 }
                 else 
                 {
-                    DataTable Materias = new DataTable();
-                    Session["Materias"] = Materias;
                     Response.Redirect("Administrador/Usuario/Usuarios.aspx");
                 }
             }

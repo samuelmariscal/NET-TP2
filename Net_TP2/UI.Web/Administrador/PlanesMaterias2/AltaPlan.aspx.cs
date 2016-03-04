@@ -62,8 +62,8 @@ namespace UI.Web.Administrador.PlanesMaterias2
             DataRow newRow = dt.NewRow();
 
             newRow["desc_materia"] = "";
-            newRow["hs_semanales"] = 0;
-            newRow["hs_totales"] = 0;
+            newRow["hs_semanales"] = "";
+            newRow["hs_totales"] = "";
 
             dt.Rows.Add(newRow);
 
