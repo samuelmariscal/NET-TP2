@@ -18,10 +18,12 @@ namespace UI.Web.Docente
                 Response.Redirect("../Login.aspx");
             }
             Usuario usu = (Usuario)Session["Usuario"];
-
-            dgvCursos.DataSource = new CursoLogic().DameCursos();
-            dgvCursos.DataBind();
-            this.lblVacio.Text = "";
+            if (Page.IsPostBack)
+            {
+                dgvCursos.DataSource = new CursoLogic().DameCursos();
+                dgvCursos.DataBind();
+                this.lblVacio.Text = "";
+            }
         }
 
         protected void dgvCursos_OnRowDataBound(object sender, GridViewRowEventArgs e)

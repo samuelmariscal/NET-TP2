@@ -28,7 +28,7 @@ namespace UI.Web
         protected void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Session.Abandon();            
-            HttpContext.Current.Response.Redirect("../Login.aspx", true); 
+            HttpContext.Current.Response.Redirect("~/Login.aspx", true); 
         }
         
     }

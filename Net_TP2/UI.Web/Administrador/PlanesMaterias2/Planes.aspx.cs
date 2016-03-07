@@ -51,7 +51,7 @@ namespace UI.Web.Administrador.PlanesMaterias2
                 dgvMaterias.SelectedIndex = Convert.ToInt32(e.CommandArgument);
                 GridViewRow row = dgvMaterias.SelectedRow;
                 string id = row.Cells[0].Text;
-                Response.Redirect("ModificarMateria.aspx?id=" + id);
+                Response.Redirect("../PlanesMaterias/ModificarMateria.aspx?id=" + id);
             }
         }
 
